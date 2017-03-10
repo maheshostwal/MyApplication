@@ -23,13 +23,14 @@
         <activity
             android:name=".QRCodeReaderActivity"
             android:label="@string/title_activity_qrcode_reader"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-
-
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".barcodereadersample.barcode.BarcodeCaptureActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
-
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".SendDataToCloud"
+            android:label="@string/title_activity_send_data_to_cloud"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

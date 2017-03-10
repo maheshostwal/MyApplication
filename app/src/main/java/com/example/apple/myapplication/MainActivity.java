@@ -108,6 +108,8 @@ public class MainActivity extends AppCompatActivity implements
     @Override
     public void onConnected(@Nullable Bundle bundle) {
         settingRequest();
+        Toast.makeText(this, "On Connected!", Toast.LENGTH_SHORT).show();
+        //LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, MainActivity.this);
     }
 
     @Override
@@ -133,7 +135,7 @@ public class MainActivity extends AppCompatActivity implements
     /*Method to get the enable location settings dialog*/
     public void settingRequest() {
         mLocationRequest = new LocationRequest();
-        mLocationRequest.setInterval(10000);    // 10 seconds, in milliseconds
+        mLocationRequest.setInterval(1000);    // 10 seconds, in milliseconds
         mLocationRequest.setFastestInterval(1000);   // gv 1 second, in milliseconds
         mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
 
@@ -236,6 +238,7 @@ public class MainActivity extends AppCompatActivity implements
     public void onLocationChanged(Location location) {
         mLastLocation = location;
         _progressBar.setVisibility(View.INVISIBLE);
+        Toast.makeText(this, "Location Changed!", Toast.LENGTH_SHORT).show();
         _latitude.setText("Latitude: " + String.valueOf(mLastLocation.getLatitude()));
         _longitude.setText("Longitude: " + String.valueOf(mLastLocation.getLongitude()));
     }
