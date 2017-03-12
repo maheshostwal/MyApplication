@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity implements
         setContentView(R.layout.activity_main);
 
         addListenerOnButton();
+        addListenerOnButton1();
 
         _latitude = (TextView) findViewById(R.id.latitude);
         _longitude = (TextView) findViewById(R.id.longitude);
@@ -90,6 +91,26 @@ public class MainActivity extends AppCompatActivity implements
             public void onClick(View arg0) {
 
                 Intent intent = new Intent(context, QRCodeReaderActivity.class);
+                startActivity(intent);
+
+            }
+
+        });
+
+    }
+
+    public void addListenerOnButton1() {
+
+        final Context context = this;
+
+        button = (Button) findViewById(R.id.button2);
+
+        button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+
+                Intent intent = new Intent(context, SendDataToCloud.class);
                 startActivity(intent);
 
             }

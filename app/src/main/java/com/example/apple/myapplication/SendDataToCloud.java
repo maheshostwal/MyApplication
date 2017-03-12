@@ -28,7 +28,7 @@ public class SendDataToCloud extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_send_data_to_cloud);
         new SendRequest().execute();
     }
 
@@ -40,7 +40,7 @@ public class SendDataToCloud extends AppCompatActivity {
 
             try{
 
-                URL url = new URL("http://studytutorial.in/post.php");
+                URL url = new URL("https://studytutorial.in/post.php");
 
                 JSONObject postDataParams = new JSONObject();
 
